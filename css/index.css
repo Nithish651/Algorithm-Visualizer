@@ -1,0 +1,40 @@
+*{
+ margin : 0;
+}
+
+
+.header {
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+  font-family : Arial;
+}
+
+#wrapper{
+    width: 800px;
+	height: 500px;
+    position: absolute;
+  	margin: auto;
+    right : 0;
+    left : 0;
+}
+
+#inner1, #inner2{
+    background-color: #ccccb3;
+    height: 150px;
+    margin : 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size : 35px;
+    font-family  : Arial;
+    color : white;
+    cursor : pointer;
+}
+
+#inner1:hover, #inner2:hover{
+     background-color: #b8b894;
+}
