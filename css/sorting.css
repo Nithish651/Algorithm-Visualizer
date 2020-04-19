@@ -10,7 +10,8 @@
     color : white;
     font-family : Arial;
     height : 55px;
-
+    width : 100%;
+    position : fixed;
 }
 
 .dataBoard{
