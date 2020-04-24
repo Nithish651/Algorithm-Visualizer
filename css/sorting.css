@@ -6,7 +6,7 @@
 #action {
     bottom: 0;
     padding: 15px;
-    background: #1abc9c;
+    background: #ff7b25;
     color : white;
     font-family : Arial;
     height : 55px;
@@ -25,8 +25,24 @@
 .data{
     width: 5px;
     height : 450px;
-    background-color : red;
+    background-color:turquoise;
     margin-left : .25%;
     margin-right : .25%;
     float : left;
+}
+
+.option{
+    text-decoration : none;
+    color : white;
+    display : inline-block;
+    margin: 20px;
+}
+
+.option:hover{
+    color : crimson;
+}
+
+.label{
+    display : inline-block;
+    margin: 20px;
 }

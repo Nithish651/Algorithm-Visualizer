@@ -5,42 +5,25 @@
     <title>Sorting Visualizer</title>
     <link rel = "stylesheet" href="../css/index.css"/>
     <link rel = "stylesheet" href="../css/sorting.css"/>
+    <script src = "../scripts/sorting.js"></script>
 </head>
 
     
-<body>
+<body onload="javascript:generateDataSet()">
     
     <div class = "header">Sorting Visualizer</div>
   
-    <div class = "dataBoard">
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-        <div class = "data"></div>
-     </div>
+    <div class = "dataBoard" id="board"></div>
     
-    <div id = "action">footer</div>
+    <div id = "action">
+        <a class = "option" href="javascript:generateDataSet()">Generate Array</a>
+        <a class = "option" href="#">Bubble Sort</a>
+        <a class = "option" href="#">Merge Sort</a>
+        <a class = "option" href="#">Heap Sort</a>
+        <p class="label">Speed</p>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+
+    </div>
 </body>
 
 </html>
