@@ -22,6 +22,7 @@ function generateDataSet(){
 function startBubbleSort(){
     disableControls();
     bubbleSort();
+ 
 }
 
 
@@ -56,6 +57,7 @@ async function bubbleSort(){
     }
                 
                 console.log(dataset);
+    enableControls();
 }
 
 
@@ -70,8 +72,24 @@ function disableControls(){
     }
     
     document.getElementById('speed').style.color = "red";
-    document.getElementById('speed').disabled = "true";
+    document.getElementById('speed').disabled = true;
 }
+
+
+ function enableControls(){
+
+    let controls = document.getElementsByClassName('option');
+    for(i=0; i<controls.length; i++){
+        controls[i].style.pointerEvents = "auto";
+        controls[i].style.cursor = "pointer";
+        controls[i].style.color = "white";
+    }
+    
+
+    document.getElementById('speed').disabled = false;
+    
+}
+
 
 
 function sleep(ms) {
