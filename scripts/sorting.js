@@ -17,6 +17,14 @@ function generateDataSet(){
     }
 }
 
+
+
+function startBubbleSort(){
+    disableControls();
+    bubbleSort();
+}
+
+
 async function bubbleSort(){
     
     let speed = document.getElementById("speed").value;
@@ -49,6 +57,22 @@ async function bubbleSort(){
                 
                 console.log(dataset);
 }
+
+
+
+function disableControls(){
+    
+    let controls = document.getElementsByClassName('option');
+    for(i=0; i<controls.length; i++){
+        controls[i].style.pointerEvents = "none";
+        controls[i].style.cursor = "default";
+        controls[i].style.color = "red";
+    }
+    
+    document.getElementById('speed').style.color = "red";
+    document.getElementById('speed').disabled = "true";
+}
+
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
