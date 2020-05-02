@@ -61,6 +61,54 @@ async function bubbleSort(){
 }
 
 
+function startQuickSort(){
+    disableControls();
+    quickSort(dataset,0,dataset.length-1);
+         enableControls();
+    console.log("QS: "+dataset);
+}
+
+
+async function quickSort(array,start,end){
+    if (start < end) {
+			let pivot = await partition(array, start, end);
+			await quickSort(array, start, pivot-1 );
+			await quickSort(array, pivot + 1,end);
+		}
+
+}
+
+ async function partition(array, p, q){
+    let speed = document.getElementById("speed").value;
+    console.log(speed);
+    let board = document.getElementById("board");
+    let data = board.children;
+    let length = dataset.length;
+  		let pivot = q;
+        data[pivot].classList.add('pivot');
+		let i = p-1;
+		for ( j = p; j <= q; j++) {
+             data[j].classList.add('picked');
+   
+			if (array[j] <= array[pivot]) {
+               	i++;
+				let temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+                board.insertBefore(data[i],data[j]);
+                board.insertBefore(data[j],data[i]);
+                await sleep(speed); 
+                data[j].classList.remove('picked');
+
+			}
+            await sleep(speed); 
+            data[j].classList.remove('picked');
+		}
+            data[pivot].classList.remove('pivot');
+		    return i;
+}
+
+
 
 function disableControls(){
     
